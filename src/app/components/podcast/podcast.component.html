@@ -1,0 +1,95 @@
+<div class="container">
+
+    <section>
+        <div>
+            <img src="assets/images/basicLogo/hurrey_podcast_logo.svg" alt="hurrey logo" class="hurreyLogo">
+        </div>
+
+        <div class="search-area">
+            <input type="text" placeholder="SEARCH" class="searchBox" [(ngModel)]="searchText"
+                (keyup)="filterText(searchTerms, searchText)">
+            <img src="assets/images/basicLogo/search_logo.svg" alt="searchLogo" class="searchLogo">
+            <img src="assets/images/basicLogo/mic_logo.svg" alt="micLogo" class="micLogo">
+            <img src="assets/images/basicLogo/imageUpload_logo.svg" alt="micLogo" class="imageUploadLogo">
+
+            <div>
+                <button class="btn btn-danger btn-sm smallBtn m-3">Shots</button>
+                <button class="btn btn-sm smallBtn m-3" style="background: #ffefc5;">Creators</button>
+                <button class="btn btn-sm smallBtn m-3" style="background: #ffefc5;">Projects</button>
+            </div>
+            <div *ngFor="let searchResult of displaySearchResult">
+                <div class="card" style="z-index: 2;" *ngIf="searchText">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            {{searchResult | lowercase}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div>
+            <button class="btn btn-danger btnBorderRadius">
+                <!-- Latest -->
+                {{categories[0]}}
+            </button>
+        </div>
+
+        <div class="flex-container horizonScroll" style="margin-top: 1%;margin-left: -2%;">
+            <div *ngFor="let podcast of podcasts ">
+                <div>
+                    <div class="card singleCard zoom">
+                        <img class="card-img-top imageHeight" [src]="podcast.image" alt="Card image cap">
+                        <p class="card-text m-2" style="font-size: 12px;">
+                            {{podcast.title }} | {{podcast.releaseYear}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div>
+            <button class="btn btn-danger btnBorderRadius">
+                {{categories[1]}}
+            </button>
+        </div>
+
+        <div class="flex-container horizonScroll" style="margin-top: 1%;margin-left: -2%;">
+            <div *ngFor="let podcast of podcasts">
+                <div>
+                    <div class="card singleCard zoom">
+                        <img class="card-img-top imageHeight" [src]="podcast.image" alt="Card image cap">
+                        <p class="card-text m-2" style="font-size: 12px;">
+                            {{podcast.title}} | {{podcast.releaseYear}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-5">
+        <div>
+            <button class="btn btn-danger btnBorderRadius">
+                {{categories[2]}}
+            </button>
+        </div>
+
+        <div class="flex-container horizonScroll" style="margin-top: 1%;margin-left: -2%;">
+            <div *ngFor="let podcast of podcasts">
+                <div>
+                    <div class="card singleCard zoom">
+                        <img class="card-img-top imageHeight" [src]="podcast.image" alt="Card image cap">
+                        <p class="card-text m-2" style="font-size: 12px;">
+                            {{podcast.title}} | {{podcast.releaseYear}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

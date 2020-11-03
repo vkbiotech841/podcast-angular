@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body {
+  margin: 2%;
+  background: #ffefc5;
+  // background: black;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}

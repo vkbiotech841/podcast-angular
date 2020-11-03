@@ -1,0 +1,99 @@
+.hurreyLogo {
+  width: 12%;
+  position: absolute;
+  top: 30px;
+}
+.search-area {
+  background-color: #ffd0c2;
+  height: 130px;
+  width: 406px;
+  border-radius: 20px;
+
+  position: absolute;
+  top: -15px;
+  left: 55%;
+}
+
+.searchBox {
+  background: #ffefe4;
+  border-radius: 10px;
+  margin-top: 36px;
+  /* outline: none; */
+  border: none;
+  width: 90%;
+  height: 40px;
+  margin-left: 5%;
+
+  padding-left: 10%;
+}
+
+.searchLogo {
+  position: absolute;
+  width: 5%;
+  top: 36%;
+  right: 350px;
+  opacity: 0.5;
+}
+
+.micLogo {
+  position: absolute;
+  width: 3%;
+  top: 36%;
+  right: 40px;
+  opacity: 0.5;
+}
+
+.imageUploadLogo {
+  position: absolute;
+  width: 5%;
+  top: 36%;
+  right: 70px;
+  opacity: 0.5;
+}
+
+.smallBtn {
+  border-radius: 10px;
+  height: 27px;
+  font-size: 12px;
+}
+
+.btnBorderRadius {
+  border-radius: 10px;
+  background: #ff5c64;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 5px;
+  //   height: 289px;
+}
+
+.singleCard {
+  width: 8rem;
+  margin-left: 10px;
+  background: none;
+  border: none;
+}
+
+.horizonScroll {
+  overflow: auto;
+}
+
+.imageHeight {
+  height: 20vh;
+  width: 110px;
+}
+
+.zoom {
+  transition: transform 0.2s;
+  padding-top: 25%;
+  padding-left: 5%;
+  cursor: pointer;
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
