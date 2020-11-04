@@ -1,10 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
+@font-face {
+  font-family: Quicksand;
+  src: url(assets/fonts/Quicksand.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Quicksand-Bold;
+  src: url(assets/fonts/Quicksand-Bold.ttf) format("truetype");
+}
+
 body {
   margin: 2%;
   background: #ffefc5;
   // background: black;
+  font-family: Quicksand;
 }
 .container {
   max-width: 1100px;

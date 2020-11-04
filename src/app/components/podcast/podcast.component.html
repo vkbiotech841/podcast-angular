@@ -1,7 +1,7 @@
 <div class="container">
 
     <section>
-        <div>
+        <div style="margin-left: 1%;">
             <img src="assets/images/basicLogo/hurrey_podcast_logo.svg" alt="hurrey logo" class="hurreyLogo">
         </div>
 
@@ -10,7 +10,6 @@
                 (keyup)="filterText(searchTerms, searchText)">
             <img src="assets/images/basicLogo/search_logo.svg" alt="searchLogo" class="searchLogo">
             <img src="assets/images/basicLogo/mic_logo.svg" alt="micLogo" class="micLogo">
-            <img src="assets/images/basicLogo/imageUpload_logo.svg" alt="micLogo" class="imageUploadLogo">
 
             <div>
                 <button class="btn btn-danger btn-sm smallBtn m-3">Shots</button>
@@ -29,21 +28,106 @@
         </div>
     </section>
 
-    <section class="mt-5">
+    <section style="margin-top: 5rem;">
         <div>
-            <button class="btn btn-danger btnBorderRadius">
-                <!-- Latest -->
+            <button class="btn btn-danger btnBorderRadius" style="margin-left: 1%">
                 {{categories[0]}}
             </button>
         </div>
 
-        <div class="flex-container horizonScroll" style="margin-top: 1%;margin-left: -2%;">
-            <div *ngFor="let podcast of podcasts ">
+        <div class="flex-container horizonScroll" style="margin-top: -8px;margin-left: -18px;">
+            <div *ngFor="let podcast of podcasts">
+                <div>
+                    <div class="card singleCard zoom">
+                        <img class="card-img-top imageHeight" [src]="podcast.image" alt="Card image cap">
+                        <div class="card-text" style="margin-top: 5%; margin-left: 1%;">
+                            <div style="font-size: 16px; font-family: Quicksand-Bold;">
+                                {{podcast.title | titlecase}}
+                            </div>
+                            <div style="font-size: 12px;">
+                                <img src="assets/images/basicLogo/clock_logo.svg" alt="" style="width: 12%;">
+                                {{podcast.duration}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top: 5rem;">
+        <div>
+            <button class="btn btn-danger btnBorderRadius" style="margin-left: 1%">
+                {{categories[1]}}
+            </button>
+        </div>
+
+        <div class="flex-container horizonScroll" style="margin-top: -8px;margin-left: -18px;">
+            <div *ngFor="let podcast of podcasts">
+                <div>
+                    <div class="card singleCard zoom">
+                        <img class="card-img-top imageHeight" [src]="podcast.image" alt="Card image cap">
+                        <div class="card-text" style="margin-top: 5%; margin-left: 1%;">
+                            <div style="font-size: 16px; font-family: Quicksand-Bold;">{{podcast.title | titlecase}}
+                            </div>
+                            <div style="font-size: 12px;">{{podcast.duration}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="margin-top: 5rem;">
+        <div>
+            <button class="btn btn-danger btnBorderRadius" style="margin-left: 1%">
+                {{categories[2]}}
+            </button>
+        </div>
+
+        <div class="flex-container horizonScroll" style="margin-top: -8px;margin-left: -18px;">
+            <div *ngFor="let podcast of podcasts">
+                <div>
+                    <div class="card singleCard zoom">
+                        <img class="card-img-top imageHeight" [src]="podcast.image" alt="Card image cap">
+                        <div class="card-text" style="margin-top: 5%; margin-left: 1%;">
+                            <div style="font-size: 16px; font-family: Quicksand-Bold;">{{podcast.title | titlecase}}
+                            </div>
+                            <div style="font-size: 12px;">{{podcast.duration}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="mt-5">
+        <div>
+            <button class="btn btn-danger btnBorderRadius">
+                {{categories[0]}}
+            </button>
+        </div>
+        <div class="test">
+            <div class="pull-left mt-sm leftScroll">
+                <i class="fa fa-angle-left" style="font-size:36px" (click)="scrollLeft()"></i>
+            </div>
+            <div class="pull-right mt-sm rightScroll">
+                <i class=" fa fa-angle-right" style="font-size:36px" (click)="scrollRight()"></i>
+            </div>
+        </div>
+
+        <div class="flex-container horizonScroll custom-slider-main" #widgetsContent style="margin-top: 1%;">
+            <div *ngFor="let podcast of podcasts">
                 <div>
                     <div class="card singleCard zoom">
                         <img class="card-img-top imageHeight" [src]="podcast.image" alt="Card image cap">
                         <p class="card-text m-2" style="font-size: 12px;">
-                            {{podcast.title }} | {{podcast.releaseYear}}
+                            {{podcast.title}} | {{podcast.duration}}
                         </p>
                     </div>
                 </div>
@@ -57,8 +141,16 @@
                 {{categories[1]}}
             </button>
         </div>
+        <div class="test">
+            <div class="pull-left mt-sm leftScroll">
+                <i class="fa fa-angle-left" style="font-size:36px" (click)="scrollLeft()"></i>
+            </div>
+            <div class="pull-right mt-sm rightScroll">
+                <i class=" fa fa-angle-right" style="font-size:36px" (click)="scrollRight()"></i>
+            </div>
+        </div>
 
-        <div class="flex-container horizonScroll" style="margin-top: 1%;margin-left: -2%;">
+        <div class="flex-container horizonScroll custom-slider-main" #widgetsContent2 style="margin-top: 1%;">
             <div *ngFor="let podcast of podcasts">
                 <div>
                     <div class="card singleCard zoom">
@@ -78,8 +170,16 @@
                 {{categories[2]}}
             </button>
         </div>
+        <div class="test">
+            <div class="pull-left mt-sm leftScroll">
+                <i class="fa fa-angle-left" style="font-size:36px" (click)="scrollLeft()"></i>
+            </div>
+            <div class="pull-right mt-sm rightScroll">
+                <i class=" fa fa-angle-right" style="font-size:36px" (click)="scrollRight()"></i>
+            </div>
+        </div>
 
-        <div class="flex-container horizonScroll" style="margin-top: 1%;margin-left: -2%;">
+        <div class="flex-container horizonScroll custom-slider-main" #widgetsContent3 style="margin-top: 1%;">
             <div *ngFor="let podcast of podcasts">
                 <div>
                     <div class="card singleCard zoom">
@@ -92,4 +192,6 @@
             </div>
         </div>
     </section>
+
+
 </div>

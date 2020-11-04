@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-podcast',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PodcastComponent implements OnInit {
 
+
+
   constructor() { }
 
   ngOnInit() {
@@ -14,16 +16,7 @@ export class PodcastComponent implements OnInit {
   }
 
   searchText = '';
-  characters = [
-    'Ant-Man',
-    'Aquaman',
-    'Asterix',
-    'The Atom',
-    'The Avengers',
-    'Batgirl',
-    'Batman',
-    'Batwoman'
-  ];
+
 
   categories = [
     "Latest",
@@ -33,13 +26,13 @@ export class PodcastComponent implements OnInit {
 
   podcasts = [
     {
-      title: 'VIKRAM',
+      title: 'Vikram',
       image: 'assets/images/podcasts/1.png',
       audioFile: '',
       author: 'Vikram Kumar',
       releaseYear: 1990,
       description: "",
-      duration: "",
+      duration: "1 hr 30 min",
       language: "",
       type: "Non-Educational"
     },
@@ -136,7 +129,7 @@ export class PodcastComponent implements OnInit {
     },
     {
       title: 'VIRKAM',
-      image: 'assets/images/podcasts/15.png',
+      image: 'assets/images/podcasts/14.png',
       audioFile: '',
       author: 'Vikram Kumar',
       releaseYear: 1990
@@ -174,4 +167,17 @@ export class PodcastComponent implements OnInit {
     console.log("searchTerm", this.searchTerms, this.searchByYear);
   };
 
+  ///////////// Scrolling images starts here /////////////////////////////
+  @ViewChild('widgetsContent', { static: false }) widgetsContent: ElementRef;
+  scrollLeft() {
+    this.widgetsContent.nativeElement.scrollLeft -= 500;
+    console.log("left click");
+  };
+
+  scrollRight() {
+    this.widgetsContent.nativeElement.scrollLeft += 500;
+    console.log("Right click");
+  };
+
+  ///////////// Scrolling images ends here /////////////////////////////
 }

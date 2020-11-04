@@ -1,17 +1,16 @@
 .hurreyLogo {
-  width: 12%;
+  width: 10%;
   position: absolute;
   top: 30px;
 }
 .search-area {
   background-color: #ffd0c2;
   height: 130px;
-  width: 406px;
+  width: 398px;
   border-radius: 20px;
-
   position: absolute;
   top: -15px;
-  left: 55%;
+  left: 57%;
 }
 
 .searchBox {
@@ -25,6 +24,7 @@
   margin-left: 5%;
 
   padding-left: 10%;
+  outline: none;
 }
 
 .searchLogo {
@@ -71,7 +71,7 @@
 
 .singleCard {
   width: 8rem;
-  margin-left: 10px;
+  margin-left: 20px;
   background: none;
   border: none;
 }
@@ -81,8 +81,10 @@
 }
 
 .imageHeight {
-  height: 20vh;
-  width: 110px;
+  height: 16vh;
+  // height: 120px;
+  width: 120px;
+  border-radius: 10px;
 }
 
 .zoom {
@@ -95,5 +97,43 @@
 .zoom:hover {
   -ms-transform: scale(1.5); /* IE 9 */
   -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+}
+
+.custom-slider-main {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.info-box {
+  width: 50px;
+  height: 50px;
+  // width: 100%;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+.leftScroll {
+  margin-top: 10% !important;
+  margin-left: -3% !important;
+}
+
+.leftScroll:hover {
+  z-index: 10;
+  transition: transform 0.2s;
+  transform: scale(1.5);
+}
+
+.rightScroll {
+  margin-top: 10% !important;
+  margin-right: -3% !important;
+}
+
+.rightScroll:hover {
+  z-index: 10;
+  transition: transform 0.1s;
   transform: scale(1.5);
 }
